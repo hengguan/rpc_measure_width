@@ -82,8 +82,6 @@ def create_rect(img, direct, line1, line2, gt, intr_mat):
             (m2[0], m2[1], m2[0], m1[1]),
             (m1[0], mid_y),
             (m2[0], mid_y),pixel_dist)
-    # k1 = 4068 if (x2-x5) == 0 else (y2-y1)/(x2-x1)
-    # k2 = 4068 if (x4-x5) == 0 else (y4-y3)/(x4-x3)
     k = -1 / direct # (k5+k2)*0.5
     # m1 l1
     l1_x = (m2[1]-m1[1]+k*m1[0]+m2[0]/k)/(k+1/k)
